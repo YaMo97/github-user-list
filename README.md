@@ -15,8 +15,8 @@ The API for GitHub Users can be found [here](https://developer.github.com/v3/use
 
 | Page          | Screenshot    |  
 | ------------- |:-------------:|
-| List of Users | ![imgs/list-ui-example.png](https://raw.githubusercontent.com/YaMo97/GitHubUserList/master/imgs/list-ui-example.png)|
-| User Details  | ![imgs/user-details-ui-example.png](https://raw.githubusercontent.com/YaMo97/GitHubUserList/master/imgs/user-details-ui-example.png)|
+| List of Users | ![imgs/list-ui-example.png](https://raw.githubusercontent.com/YaMo97/github-user-list/master/imgs/list-ui-example.png)|
+| User Details  | ![imgs/user-details-ui-example.png](https://raw.githubusercontent.com/YaMo97/github-user-list/master/imgs/user-details-ui-example.png)|
 
 
 ### Prerequisites
@@ -33,11 +33,11 @@ What things you need to install the software and how to install them
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/YaMo97/GitHubUserList/blob/master/CONTRIBUTING.md) for details on the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/YaMo97/github-user-list/blob/master/CONTRIBUTING.md) for details on the process for submitting pull requests to us.
 
 ## Code of Conduct
 
-Please read [CODE_OF_CONDUCT.md](https://github.com/YaMo97/GitHubUserList/blob/master/CODE_OF_CONDUCT.md) for details on our code of conduct.
+Please read [CODE_OF_CONDUCT.md](https://github.com/YaMo97/github-user-list/blob/master/CODE_OF_CONDUCT.md) for details on our code of conduct.
 
 ## Authors
 
