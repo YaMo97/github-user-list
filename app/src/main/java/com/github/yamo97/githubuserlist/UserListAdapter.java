@@ -12,19 +12,10 @@ import java.util.ArrayList;
 
 public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserListViewHolder> {
 
-    ArrayList<GitHubUser> userDataset;
+    private ArrayList<GitHubUser> userDataSet;
 
-    public static class UserListViewHolder extends RecyclerView.ViewHolder {
-        public TextView name;
-
-        public UserListViewHolder(View v) {
-            super(v);
-            name = v.findViewById(R.id.name);
-        }
-    }
-
-    public UserListAdapter(ArrayList<GitHubUser> dataset) {
-        this.userDataset = dataset;
+    public UserListAdapter(ArrayList<GitHubUser> dataSet) {
+        this.userDataSet = dataSet;
     }
 
     // Create new views (invoked by the layout manager)
@@ -41,15 +32,24 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(UserListViewHolder viewHolder, int position) {
-        // - get element from your dataset at this position
+        // - get element from your dataSet at this position
         // - replace the contents of the view with that element
-        GitHubUser user = userDataset.get(position);
+        GitHubUser user = userDataSet.get(position);
         viewHolder.name.setText(user.getLogin());
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    // Return the size of your dataSet (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return userDataset.size();
+        return userDataSet.size();
+    }
+
+    public static class UserListViewHolder extends RecyclerView.ViewHolder {
+        public TextView name;
+
+        public UserListViewHolder(View v) {
+            super(v);
+            name = v.findViewById(R.id.name);
+        }
     }
 }
