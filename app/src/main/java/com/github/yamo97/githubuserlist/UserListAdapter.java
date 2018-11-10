@@ -14,12 +14,15 @@ import com.github.yamo97.githubuserlist.model.GitHubUser;
 import java.util.ArrayList;
 
 public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserListViewHolder> {
+    private static final String TAG = "UserListAdapter";
 
-    ImageLoader imageLoader = AppController.getInstance().getImageLoader();
     private ArrayList<GitHubUser> userDataSet;
+    ImageLoader imageLoader = AppController.getInstance().getImageLoader();
+    private View.OnClickListener onClickListener;
 
-    public UserListAdapter(ArrayList<GitHubUser> dataSet) {
+    public UserListAdapter(ArrayList<GitHubUser> dataSet, View.OnClickListener onClickListener) {
         this.userDataSet = dataSet;
+        this.onClickListener = onClickListener;
     }
 
     // Create new views (invoked by the layout manager)
@@ -39,9 +42,11 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
         // - get element from your dataSet at this position
         GitHubUser user = userDataSet.get(position);
 
+        // - set onClickListener on itemView
+        viewHolder.itemView.setOnClickListener(onClickListener);
+
         // - replace the contents of the view with that element
         viewHolder.name.setText(user.getLogin());
-
         viewHolder.thumbnail.setImageUrl(user.getAvatar_url(), imageLoader);
 
     }

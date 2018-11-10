@@ -1,6 +1,8 @@
 package com.github.yamo97.githubuserlist.model;
 
-public class GitHubUser {
+import java.io.Serializable;
+
+public class GitHubUser implements Serializable {
     private String login;
     private String id;
     private String node_id;

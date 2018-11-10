@@ -1,12 +1,15 @@
 package com.github.yamo97.githubuserlist;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -111,11 +114,21 @@ public class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new UserListAdapter(userList);
+        adapter = new UserListAdapter(userList, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GitHubUser user = userList.get(recyclerView.getChildLayoutPosition(v));
+
+                Toast.makeText(getApplicationContext(), user.getLogin() + " is selected!", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, UserDetailActivity.class);
+                intent.putExtra("user", user);
+                MainActivity.this.startActivity(intent);
+            }
+        });
 
         // Add Divider between Items.
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-
         recyclerView.setAdapter(adapter);
     }
 }
