@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Show Progress Bar
-        pb = findViewById(R.id.progress_circle);
+        pb = findViewById(R.id.main_progress_circle);
 
         // Initialize Recycler View
         initRecyclerView();
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        recyclerView = findViewById(R.id.user_recycler_view);
+        recyclerView = findViewById(R.id.main_user_recycler_view);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView

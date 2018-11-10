@@ -63,8 +63,8 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.UserLi
 
         public UserListViewHolder(View v) {
             super(v);
-            name = v.findViewById(R.id.name);
-            thumbnail = v.findViewById(R.id.thumbnail);
+            name = v.findViewById(R.id.user_list_name);
+            thumbnail = v.findViewById(R.id.user_list_thumbnail);
         }
     }
 }

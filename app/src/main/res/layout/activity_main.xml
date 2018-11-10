@@ -7,13 +7,13 @@
     tools:context=".MainActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/user_recycler_view"
+        android:id="@+id/main_user_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical" />
 
     <ProgressBar
-        android:id="@+id/progress_circle"
+        android:id="@+id/main_progress_circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
